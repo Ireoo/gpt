@@ -22,17 +22,17 @@ jobs:
         with:
           node-version: 16 #lts/*
 
-      - name: clone
-        env:
-          sha: ${{steps.sha.outputs.value}} 
-        run: |
-          ls -alF
-          rm -rf *
-          rm -rf .git
-          rm -rf .github
-          ls -alF
-          git clone -b main ${{secrets.GIT_ADDRESS}} .
-        shell: bash
+#       - name: clone
+#         env:
+#           sha: ${{steps.sha.outputs.value}} 
+#         run: |
+#           ls -alF
+#           rm -rf *
+#           rm -rf .git
+#           rm -rf .github
+#           ls -alF
+#           git clone -b main ${{secrets.GIT_ADDRESS}} .
+#         shell: bash
         
       - name: install
         run: npm i
