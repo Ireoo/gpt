@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: macOS-latest
+
+    steps:
+      - name: init
+        env:
+          sha: ${{github.sha}}
+          content: ${{github.event.head_commit.message}}
+        run: |
+          git config --global user.email "jack.wang@integem.com"
+          git config --global user.name "Jack Wang"
+          echo $content
+          echo "$sha" > sha.txt
+          git add sha.txt
+          git commit -m "$content"
+          git push

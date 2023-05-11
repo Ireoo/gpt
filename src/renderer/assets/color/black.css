@@ -1,0 +1,443 @@
+.black .el-dialog {
+    background: #333 !important;
+}
+
+.black .el-dialog .el-dialog__title {
+    color: #fff;
+}
+
+.black .el-dialog .el-input__inner {
+    background: #555 !important;
+}
+
+div#app.black {
+    background: #242425;
+}
+
+.black .boxCenter .el-col {
+    color: #666;
+}
+
+.black .quan {
+    background: rgba(102, 102, 102, 0.15);
+}
+
+.black .quan > div {
+    background: #666;
+}
+
+.black .quan.on {
+    background: rgba(72, 152, 248, 0.3);
+    animation: color_black 1s infinite;
+}
+
+@keyframes color_black {
+    from {
+        background: rgba(72, 152, 248, 0.5);
+    }
+    50% {
+        background: rgba(102, 102, 102, 0.15);
+    }
+    to {
+        background: rgba(72, 152, 248, 0.5);
+    }
+}
+
+.black .quan.on > div {
+    background: #4898f8;
+}
+
+.black .tubiaoBox h1 {
+    color: #eee;
+}
+
+/*.el-card.tag.up {*/
+/*  box-shadow: 0 0 5px red !important;*/
+/*}*/
+
+/*.el-card.tag.down {*/
+/*  box-shadow: 0 0 5px green !important;*/
+/*}*/
+
+/*.el-card.tag.process {*/
+/*  box-shadow: 0 0 5px #002aff !important;*/
+/*}*/
+
+/*.el-card.tag.download {*/
+/*  box-shadow: 0 0 5px #008071 !important;*/
+/*}*/
+
+.black .el-card.tag > .el-card__body {
+    background: none !important;
+    color: rgb(191, 191, 191) !important;
+}
+
+.black .el-card.tag.up > .el-card__body {
+    background: none !important;
+    color: rgb(168, 67, 67) !important;
+}
+
+.black .el-card.tag.down > .el-card__body {
+    background: none !important;
+    color: rgb(77, 161, 62) !important;
+}
+
+.black .el-card.tag.process > .el-card__body {
+    background: none !important;
+    color: rgb(70, 110, 168) !important;
+}
+
+.black .el-card.tag.download > .el-card__body {
+    background: none !important;
+    color: rgb(72, 165, 167) !important;
+}
+
+.black .el-card.tag {
+    background: #222 !important;
+    /*box-shadow: 0 0 10px rgb(168, 67, 67) !important;*/
+}
+
+/*.black .el-card.tag.up {*/
+/*    background: rgba(255, 255, 255, 0.1) !important;*/
+/*    !*box-shadow: 0 0 10px rgb(168, 67, 67) !important;*!*/
+/*}*/
+
+/*.black .el-card.tag.down {*/
+/*    background: rgba(255, 255, 255, 0.1) !important;*/
+/*    !*box-shadow: 0 0 10px rgb(77, 161, 62) !important;*!*/
+/*}*/
+
+/*.black .el-card.tag.process {*/
+/*    background: rgba(255, 255, 255, 0.1) !important;*/
+/*    !*box-shadow: 0 0 10px rgb(70, 110, 168) !important;*!*/
+/*}*/
+
+/*.black .el-card.tag.download {*/
+/*    background: rgba(255, 255, 255, 0.1) !important;*/
+/*    !*box-shadow: 0 0 10px rgb(72, 165, 167) !important;*!*/
+/*}*/
+
+.black .el-card__body .el-checkbox {
+    color: #ccc !important;
+}
+
+.black .el-card.tag .el-card__body {
+    /*padding: 10px !important;*/
+    color: #aaaaaa !important;
+}
+
+.black .el-card.tag .el-card__body > .el-row {
+    padding: 20px 0 !important;
+    /*color: #fff !important;*/
+}
+
+.black .el-card__body {
+    background: #333;
+    color: #ccc !important;
+}
+
+.black .el-container.main {
+    background: rgba(0, 0, 0, 0.8);
+    /* background: #000; */
+    /*background: inherit;*/
+    /*        -webkit-filter: blur(5px);*/
+    /*        -moz-filter: blur(5px);*/
+    /*        -ms-filter: blur(5px);*/
+    /*        -o-filter: blur(5px);*/
+    /*        filter: blur(5px);*/
+    /*        filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);*/
+}
+
+.black .el-aside {
+    background: #2b3032;
+}
+
+.black .copy {
+    color: #666;
+    /* text-shadow: 0 0 1px #000; */
+}
+
+.black .el-footer,
+.black .el-footer .right {
+    background: #303032;
+}
+
+.black .el-footer div.log {
+    color: #fff;
+}
+
+.black div.log div {
+    background: #000;
+}
+
+.black div.log span {
+    color: #ccc;
+}
+
+.black div.log i {
+    color: #666;
+}
+
+.black ul.menu > li {
+    color: #fff;
+    background: none;
+}
+
+.black ul.menu > li > a {
+    color: #fff;
+}
+
+.black ul.menu > li:hover {
+    background: rgb(62, 62, 62);
+}
+
+.black ul.menu > li.on {
+    background: #000;
+    color: #ccc;
+}
+
+.black .box-card.use {
+    background: #252525;
+}
+
+.black .box-card.use.on {
+    background: #4897f8b0;
+}
+
+.black .el-card > .el-card__body {
+    background: #111;
+}
+
+.black .el-collapse {
+    border-bottom: 1px solid RGBA(0, 0, 0, 0) !important;
+}
+
+.black .el-collapse-item__header {
+    background: none !important;
+    color: #fff !important;
+}
+
+.black .el-collapse-item__wrap {
+    background: none !important;
+}
+
+.black .el-input-group__append,
+.black .el-input-group__prepend {
+    background-color: #444 !important;
+}
+
+.black .el-input__inner {
+    color: #fff !important;
+    background-color: #444 !important;
+    border: 1px solid #333 !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+.black .el-input__inner::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #333 !important;
+}
+
+.black .el-input__inner::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #333 !important;
+}
+
+.black .el-input__inner:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #333 !important;
+}
+
+.black .el-input.is-disabled .el-input__inner {
+    cursor: default !important;
+}
+
+.black .el-button.el-button--default {
+    background: #444;
+    color: #ccc;
+    border: none !important;
+}
+
+.black .el-button.el-button--default:hover {
+    background: #333;
+    color: #ccc;
+    border: none !important;
+}
+
+.black .el-card.use > .el-card__body {
+    background: none !important;
+    padding: 0 !important;
+}
+
+.black .el-card.use > .el-card__body > .el-row > .el-col {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 38px;
+}
+
+.black .el-card.use > .el-card__body > .el-row > .el-col:first-child {
+    padding-left: 10px !important;
+}
+
+.black .el-card.use > .el-card__body > .el-row > .el-col > .el-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 1px solid #000 !important;
+    width: 100%;
+    background: none;
+    text-align: center;
+    font-size: 12px;
+}
+
+.black .el-timeline-item__content {
+    color: #ccc !important;
+}
+
+.black .el-textarea {
+    margin-bottom: 10px;
+}
+
+.black .el-textarea .el-textarea__inner {
+    background: #111;
+    color: #ccc;
+    border: 1px solid #000;
+}
+
+.black .sub .el-card__body {
+    background: #222 !important;
+}
+
+.black .sub.look .el-card__body {
+    background: #222 !important;
+}
+
+.black .sub.on .el-card__body {
+    background: rgba(72, 152, 248, 0.5) !important;
+}
+
+.black .sub.on {
+    /*box-shadow: 0 0 5px #4898f8 !important;*/
+    background: #222 !important;
+}
+
+.black .sub.mini {
+    /*box-shadow: 0 0 5px rgb(255, 154, 72) !important;*/
+    background: #222 !important;
+}
+
+.black .sub.mini .el-card__body {
+    background: rgba(72, 152, 248, 0.5) !important;
+}
+
+.black .testNodes i {
+    color: #4898f8;
+}
+
+.black .testNodes.loading i {
+    color: #525252;
+}
+
+.black .delay {
+    background: RGBA(255, 255, 255, 0.3);
+}
+
+.black .openOrClose {
+    background: #000;
+    color: #eee;
+}
+
+.black .el-select-dropdown.el-popper {
+    background: #333 !important;
+    color: #eee !important;
+    border-color: #000 !important;
+}
+
+.black .el-select-dropdown__item.hover,
+.black .el-select-dropdown__item:hover {
+    background: #555 !important;
+}
+
+.black .el-popper[x-placement^='top'] .popper__arrow,
+.black .el-popper[x-placement^='top'] .popper__arrow::after {
+    border-top-color: #333 !important;
+}
+
+.black .el-popper[x-placement^='bottom'] .popper__arrow,
+.black .el-popper[x-placement^='bottom'] .popper__arrow::after {
+    border-bottom-color: #333 !important;
+}
+
+.black .el-timeline-item__tail {
+    border-left: 2px solid #333;
+}
+
+.black .el-tabs__nav-wrap::after {
+    background-color: #333;
+}
+
+.black .el-tabs h1 {
+    color: #666;
+}
+
+.black .el-tabs .el-select-dropdown.el-popper {
+    background: #999 !important;
+    color: #eee !important;
+    border-color: #888 !important;
+}
+
+.black .el-tabs__item {
+    color: #999;
+}
+
+.black .el-table th,
+.black .el-table tr {
+    background-color: #333;
+}
+
+.black .el-table__body tr.hover-row.current-row > td,
+.black .el-table__body tr.hover-row.el-table__row--striped.current-row > td,
+.black .el-table__body tr.hover-row.el-table__row--striped > td,
+.black .el-table__body tr.hover-row > td {
+    background-color: #222;
+}
+
+.black .el-table,
+.black .el-table td,
+.black .el-table tr,
+.black .el-table th,
+.black .el-table thead {
+    border-color: #464646 !important;
+}
+
+.black .el-table--border::after,
+.black .el-table--group::after,
+.black .el-table::before,
+.black .el-table__fixed-right::before,
+.black .el-table__fixed::before {
+    background-color: #464646 !important;
+}
+
+.black .el-table__body-wrapper.is-scrolling-none {
+    background-color: #333;
+}
+
+.black .el-table {
+    color: #fff;
+}
+
+.black .el-pagination.is-background .btn-next,
+.black .el-pagination.is-background .btn-prev,
+.black .el-pagination.is-background .el-pager li {
+    background: #444;
+    color: #ccc;
+}
+
+.black .el-footer .el-input__inner {
+    color: #fff !important;
+    background-color: #111 !important;
+    border: 1px solid #222 !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}

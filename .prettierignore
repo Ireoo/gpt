@@ -1,0 +1,11 @@
+config
+static
+version
+.gitignore
+.prettierignore
+command/
+auto/
+index.ejs
+*.py
+src/renderer/assets
+build/icons

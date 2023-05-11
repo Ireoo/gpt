@@ -1,0 +1,322 @@
+.white .el-dialog {
+    background: #fff !important;
+}
+
+.white .el-dialog .el-dialog__title {
+    color: #333;
+}
+
+.white .el-dialog .el-input__inner {
+    background: #ccc !important;
+}
+
+div#app.white {
+    background: #fff;
+}
+
+.white .boxCenter .el-col {
+    color: #333;
+}
+
+.white .quan {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.white .quan > div {
+    background: #fff;
+}
+
+.white .quan.on {
+    background: rgba(72, 152, 248, 0.3);
+    animation: color_black 1s infinite;
+}
+
+@keyframes color_black {
+    from {
+        background: rgba(72, 152, 248, 0.5);
+    }
+    50% {
+        background: rgba(200, 200, 200, 0.15);
+    }
+    to {
+        background: rgba(72, 152, 248, 0.5);
+    }
+}
+
+.white .quan.on > div {
+    background: #4898f8;
+}
+
+.white .tubiaoBox h1 {
+    color: #111;
+}
+
+/*.el-card.tag.up {*/
+/*  box-shadow: 0 0 5px red !important;*/
+/*}*/
+
+/*.el-card.tag.down {*/
+/*  box-shadow: 0 0 5px green !important;*/
+/*}*/
+
+/*.el-card.tag.process {*/
+/*  box-shadow: 0 0 5px #002aff !important;*/
+/*}*/
+
+/*.el-card.tag.download {*/
+/*  box-shadow: 0 0 5px #008071 !important;*/
+/*}*/
+
+.white .el-card.tag > .el-card__body {
+    background: none !important;
+    color: rgb(61, 61, 61) !important;
+}
+
+.white .el-card.tag.up > .el-card__body {
+    background: none !important;
+    color: rgb(168, 67, 67) !important;
+}
+
+.white .el-card.tag.down > .el-card__body {
+    background: none !important;
+    color: rgb(77, 161, 62) !important;
+}
+
+.white .el-card.tag.process > .el-card__body {
+    background: none !important;
+    color: rgb(70, 110, 168) !important;
+}
+
+.white .el-card.tag.download > .el-card__body {
+    background: none !important;
+    color: rgb(72, 165, 167) !important;
+}
+
+.white .el-card.tag {
+    background: #eee !important;
+    /*box-shadow: 0 0 10px rgb(168, 67, 67) !important;*/
+}
+
+.white .el-card__body .el-checkbox {
+    color: #333 !important;
+}
+
+.white .el-card.tag .el-card__body {
+    /*padding: 30px 10px !important;*/
+    color: #333 !important;
+}
+
+.white .el-card.tag .el-card__body > .el-row {
+    padding: 20px 0;
+    /*color: #333 !important;*/
+}
+
+.white .el-card__body {
+    background: #333;
+    color: #333 !important;
+}
+
+.white .el-container.main {
+    background: rgba(255, 255, 255, 0.8);
+    /* background: #000; */
+    /*background: inherit;*/
+    /*        -webkit-filter: blur(5px);*/
+    /*        -moz-filter: blur(5px);*/
+    /*        -ms-filter: blur(5px);*/
+    /*        -o-filter: blur(5px);*/
+    /*        filter: blur(5px);*/
+    /*        filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);*/
+}
+
+.white .el-aside {
+    background: #ccc;
+}
+
+.white .copy {
+    color: #666;
+    /* text-shadow: 0 0 1px #000; */
+}
+
+.white .el-footer,
+.white .el-footer .right {
+    background: #ccc;
+}
+
+.white .el-footer div.log {
+    color: #333;
+}
+
+.white div.log div {
+    background: #fff;
+}
+
+.white div.log span {
+    color: #333;
+}
+
+.white div.log i {
+    color: #e8e8e8;
+}
+
+.white ul.menu > li {
+    color: #333;
+    background: none;
+}
+
+.white ul.menu > li > a {
+    color: #333;
+}
+
+.white ul.menu > li:hover {
+    background: rgb(210, 210, 210);
+}
+
+.white ul.menu > li.on {
+    background: #fff;
+    color: #333;
+}
+
+.white .box-card.use {
+    background: #eee;
+}
+
+.white .box-card.use.on {
+    background: #4897f8b0;
+}
+
+.white .el-card > .el-card__body {
+    background: #eee;
+}
+
+.white .el-collapse {
+    border-bottom: 1px solid RGBA(0, 0, 0, 0) !important;
+}
+
+.white .el-collapse-item__header {
+    background: none !important;
+    color: #333 !important;
+}
+
+.white .el-collapse-item__wrap {
+    background: none !important;
+}
+
+.white .el-input-group__append,
+.white .el-input-group__prepend {
+    background-color: #eaeaea !important;
+}
+
+.white .el-input__inner {
+    color: #333 !important;
+    background-color: #eaeaea !important;
+    border: 1px solid #ccc !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+.white .el-input__inner::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #333 !important;
+}
+
+.white .el-input__inner::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #333 !important;
+}
+
+.white .el-input__inner:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #333 !important;
+}
+
+.white .el-input.is-disabled .el-input__inner {
+    cursor: default !important;
+}
+
+.white .el-button.el-button--default {
+    background: #ccc;
+    color: #333;
+    border: none !important;
+}
+
+.white .el-button.el-button--default:hover {
+    background: #c1c1c1;
+    color: #333;
+    border: none !important;
+}
+
+.white .el-card.use > .el-card__body {
+    background: none !important;
+    padding: 0 !important;
+}
+
+.white .el-card.use > .el-card__body > .el-row > .el-col {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 38px;
+}
+
+.white .el-card.use > .el-card__body > .el-row > .el-col:first-child {
+    padding-left: 10px !important;
+}
+
+.white .el-card.use > .el-card__body > .el-row > .el-col > .el-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 1px solid #fff !important;
+    width: 100%;
+    background: none;
+    text-align: center;
+    font-size: 12px;
+}
+
+.white .el-timeline-item__content {
+    color: #ccc !important;
+}
+
+.white .el-textarea {
+    margin-bottom: 10px;
+}
+
+.white .el-textarea .el-textarea__inner {
+    background: #111;
+    color: #ccc;
+    border: 1px solid #000;
+}
+
+.white .sub .el-card__body {
+    background: #eee !important;
+}
+
+.white .sub.on .el-card__body {
+    background: #4898f8 !important;
+}
+
+.white .sub.on {
+    /*box-shadow: 0 0 5px #4898f8 !important;*/
+}
+
+.white .sub.mini {
+    /*box-shadow: 0 0 5px #f8d548 !important;*/
+}
+
+.white .sub.mini .el-card__body {
+    background: #4898f8 !important;
+}
+
+.white .testNodes i {
+    color: #4898f8;
+}
+
+.white .testNodes.loading i {
+    color: #b4b4b4;
+}
+
+.white .delay {
+    background: RGBA(0, 0, 0, 0.3);
+}
+
+.white .openOrClose {
+    background: #eee;
+}

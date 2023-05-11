@@ -1,0 +1,107 @@
+{
+  "id": "1837866",
+  "name": "Cla'sh'r",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1117969",
+      "name": "在线",
+      "font_class": "zaixian1",
+      "unicode": "e79e",
+      "unicode_decimal": 59294
+    },
+    {
+      "icon_id": "7939944",
+      "name": "方向-向右",
+      "font_class": "arrow-",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "7939945",
+      "name": "方向-向右直角",
+      "font_class": "arrow-1",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "7939953",
+      "name": "方向-向右-粗",
+      "font_class": "arrow-2",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "12814127",
+      "name": "在线",
+      "font_class": "zaixian",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "1191688",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e711",
+      "unicode_decimal": 59153
+    },
+    {
+      "icon_id": "1722992",
+      "name": "关闭",
+      "font_class": "guanbi1",
+      "unicode": "e7be",
+      "unicode_decimal": 59326
+    },
+    {
+      "icon_id": "998487",
+      "name": "连接",
+      "font_class": "ai70",
+      "unicode": "e6bc",
+      "unicode_decimal": 59068
+    },
+    {
+      "icon_id": "1114",
+      "name": "网络",
+      "font_class": "wangluo",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "436392",
+      "name": "网络",
+      "font_class": "62",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "5330293",
+      "name": "上传",
+      "font_class": "shangchuan",
+      "unicode": "e775",
+      "unicode_decimal": 59253
+    },
+    {
+      "icon_id": "5330622",
+      "name": "下载",
+      "font_class": "xiazai",
+      "unicode": "e7a3",
+      "unicode_decimal": 59299
+    },
+    {
+      "icon_id": "8763662",
+      "name": "上传",
+      "font_class": "shangchuan1",
+      "unicode": "e6cc",
+      "unicode_decimal": 59084
+    },
+    {
+      "icon_id": "8763665",
+      "name": "下载",
+      "font_class": "xiazai1",
+      "unicode": "e6cd",
+      "unicode_decimal": 59085
+    }
+  ]
+}
