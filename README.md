@@ -23,4 +23,4 @@ This project was generated with [electron-vue](https://github.com/SimulatedGREG/
 
 # 打包程序下载地址
 
-[https://github.com/integemjack/iDownloader/releases](https://github.com/integemjack/iDownloader/releases 'https://github.com/integemjack/iDownloader/releases')
+[https://github.com/Ireoo/gpt/releases](https://github.com/Ireoo/gpt/releases 'https://github.com/Ireoo/gpt/releases')
