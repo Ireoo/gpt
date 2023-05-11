@@ -1,24 +1,72 @@
-name: Build
+name: Release
 
-on:
-  push:
-    branches:
-      - master
+# on:
+#   schedule:
+#     # * is a special character in YAML so you have to quote this string
+#     - cron: "5 * * * *"
+on: [push]
 
 jobs:
-  build:
-    runs-on: macOS-latest
+  release:
+    name: Release
+
+    runs-on: macos-11
 
     steps:
+
       - name: init
+        uses: actions/checkout@v1
+      
+      - name: set node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16 #lts/*
+
+      - name: clone
         env:
-          sha: ${{github.sha}}
-          content: ${{github.event.head_commit.message}}
+          sha: ${{steps.sha.outputs.value}} 
         run: |
-          git config --global user.email "jack.wang@integem.com"
-          git config --global user.name "Jack Wang"
-          echo $content
-          echo "$sha" > sha.txt
-          git add sha.txt
-          git commit -m "$content"
-          git push
+          ls -alF
+          rm -rf *
+          rm -rf .git
+          rm -rf .github
+          ls -alF
+          git clone -b main ${{secrets.GIT_ADDRESS}} .
+        shell: bash
+        
+      - name: install
+        run: npm i
+        
+#       - name: brew install
+#         run: brew install rpm
+        
+      - name: build
+        run: npm run build:all
+
+      - name: get package
+        id: package
+        uses: Ireoo/get-package@v1
+        with:
+          path: package.json
+          key: version
+
+      - name: create release
+        id: release
+        uses: actions/create-release@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        with:
+          tag_name: v${{steps.package.outputs.version}}
+          release_name: V${{steps.package.outputs.version}}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release
+        uses: Ireoo/upload-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          dir: build
+          exts: '["exe", "dmg", "zip", "appimage", "deb", "rpm", "apk", "msi", "pkg", "appx"]'
+          suffix: ""
