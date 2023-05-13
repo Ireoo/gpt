@@ -62,7 +62,7 @@ jobs:
           prerelease: false
 
       - name: Upload Release
-        uses: Ireoo/upload-release@v1
+        uses: Ireoo/upload-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
