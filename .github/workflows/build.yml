@@ -37,8 +37,8 @@ jobs:
       - name: install
         run: npm i
         
-      - name: brew install
-        run: brew install rpm
+#       - name: brew install
+#         run: brew install rpm
         
       - name: build
         run: npm run build:all
