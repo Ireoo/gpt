@@ -1,6 +1,6 @@
 {
   "name": "gpt",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Ireoo <i@ireoo.com>",
   "description": "speak with git",
   "homepage": "https://github.com/ireoo/gpt",
@@ -106,6 +106,7 @@
     "plist": "^3.0.4",
     "progress-stream": "^2.0.0",
     "query-string": "^7.0.1",
+    "quora-poe.js": "^1.0.3-alpha.1",
     "regedit": "^5.0.0",
     "request": "^2.88.2",
     "socket.io-client": "^2.3.0",

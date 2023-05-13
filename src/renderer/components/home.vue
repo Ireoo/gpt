@@ -35,6 +35,7 @@ import path from 'path'
 import $ from 'jquery'
 import * as tf from '@tensorflow/tfjs'
 import DeepSpeech from 'deepspeech'
+import Poe from 'quora-poe.js'
 
 export default {
   name: 'home',
@@ -49,7 +50,8 @@ export default {
       canvas: null,
       canvasContext: null,
       animationFrameId: null,
-      result: ''
+      result: '',
+      bot: null
     }
   },
   watch: {
@@ -124,13 +126,18 @@ export default {
       return new Float32Array(buffer)
     }
   },
-  mounted() {
+  async mounted() {
     const modelUrl = 'path/to/deepspeech-0.9.3-models.pbmm'
     const scorerUrl = 'path/to/deepspeech-0.9.3-models.scorer'
 
     // 加载DeepSpeech模型
     this.model = new DeepSpeech.Model(modelUrl)
     this.model.enableExternalScorer(scorerUrl)
+
+    // poe
+    this.bot = new Poe()
+    await bot.start()
+    // let answer = await bot.ask('Hello!', 'gpt-4')
 
     // 获取音频流
     navigator.mediaDevices
