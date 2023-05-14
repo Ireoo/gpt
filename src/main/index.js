@@ -1,8 +1,8 @@
 'use strict'
 
 import { app, BrowserWindow, Menu, remote, globalShortcut, ipcMain, dialog } from 'electron'
-// import '../renderer/store'
-
+// import IpcMain from './plugins/ipMain'
+app.allowRendererProcessReuse = false
 /**
  * Set `__static` path to static files in production
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
@@ -27,6 +27,7 @@ function createWindow() {
     width: process.env.NODE_ENV === 'development' ? 1270 : 900,
     minWidth: 900,
     webPreferences: {
+      sandbox: false,
       nodeIntegration: true,
       webSecurity: false,
       nodeIntegrationInWorker: true,
@@ -43,6 +44,8 @@ function createWindow() {
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+
+  //   IpcMain()
 }
 
 app.on('ready', createWindow)

@@ -12,3 +12,4 @@ thumbs.db
 yarn.lock
 package-lock.json
 yarn-error.log
+deepspeech-*

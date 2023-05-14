@@ -1,16 +1,11 @@
 <template>
   <el-container class="main">
     <el-header style="display: flex; align-content: center; align-items: center; justify-content: flex-end">
-      <!--      {{ dom }}-->
-      <el-input v-model="local">
-        <el-button slot="append" icon="el-icon-folder-opened" @click="getLocal(`local`)"></el-button>
-      </el-input>
-      <!-- <el-button title="Logout" @click="logout" icon="el-icon-user-solid" circle></el-button> -->
     </el-header>
     <el-container>
       <el-aside width="80px">
-        <div :style="`height: ${dom.height - 70}px;`" style="overflow-y: auto; overflow-x: hidden">
-          <div
+        <div>
+          <!-- <div
             v-for="item in list"
             :key="item.name"
             :class="{ active: item.name === now, item: true }"
@@ -18,7 +13,7 @@
           >
             <el-image :src="item.icon" fit="fill"></el-image>
             {{ item.label }}
-          </div>
+          </div> -->
         </div>
       </el-aside>
       <el-main>
@@ -34,14 +29,14 @@ import os from 'os'
 import path from 'path'
 import $ from 'jquery'
 import * as tf from '@tensorflow/tfjs'
-import DeepSpeech from 'deepspeech'
-import Poe from 'quora-poe.js'
+// import DeepSpeech from 'deepspeech'
+const DeepSpeech = require('deepspeech')
 
 export default {
   name: 'home',
   data() {
     return {
-      model: null,
+      model: false,
       recording: false,
       mediaRecorder: null,
       audioContext: null,
@@ -51,14 +46,22 @@ export default {
       canvasContext: null,
       animationFrameId: null,
       result: '',
-      bot: null
+      bot: null,
+      audioDatas: null
     }
   },
   watch: {
     // 监听mediaRecorder.dataavailable事件
     'mediaRecorder.state'(value) {
+      console.log(`mediaRecorder.state:`, value)
       if (value === 'recording') {
         this.mediaRecorder.ondataavailable = event => {
+          //   console.log(event.data)
+          //   if (!this.audioDatas) {
+          //     this.audioDatas = event.data
+          //   } else {
+          //     this.audioDatas = this.audioDatas + event.data
+          //   }
           // 将音频数据转为Float32Array格式
           const audioData = new Float32Array(event.data)
           // 对音频数据进行识别
@@ -88,15 +91,26 @@ export default {
     async recognize(audioData) {
       // 对音频进行预处理
       const input = this.preprocess(audioData)
+      //   console.log(input)
 
-      // 对音频进行识别
-      const inferenceTime = Date.now()
-      const result = await this.model.stt(input)
-      console.log(`Inference time: ${Date.now() - inferenceTime}ms`)
-      console.log(`Result: ${result}`)
+      if (this.model) {
+        try {
+          // 对音频进行识别
+          const inferenceTime = Date.now()
+          // this.$electron.ipcRenderer.send('model_stt', { input, inferenceTime })
+          const result = await this.model.stt(input)
+          // if (result !== '') {
+          console.log(`Result: ${result}`)
+          console.log(`Inference time: ${Date.now() - inferenceTime}ms`)
+          // }
 
-      // 更新识别结果
-      this.result = result
+          // 更新识别结果
+          this.result = result
+          // console.log(result)
+        } catch (e) {
+          console.log(e)
+        }
+      }
     },
     preprocess(audioData, sampleRate) {
       // 归一化
@@ -126,38 +140,19 @@ export default {
       return new Float32Array(buffer)
     }
   },
-  async mounted() {
-    const modelUrl = 'path/to/deepspeech-0.9.3-models.pbmm'
-    const scorerUrl = 'path/to/deepspeech-0.9.3-models.scorer'
+  mounted() {
+    const modelUrl = './deepspeech-0.9.3-models.pbmm'
+    const scorerUrl = './deepspeech-0.9.3-models.scorer'
 
     // 加载DeepSpeech模型
     this.model = new DeepSpeech.Model(modelUrl)
     this.model.enableExternalScorer(scorerUrl)
 
-    // poe
-    this.bot = new Poe()
-    await bot.start()
-    /**
-     * https://www.npmjs.com/package/quora-poe.js
-     */
-    // let answer = await this.bot.ask('Hello!', 'gpt-4')
-    // let conversation = [
-    //   {
-    //     role: 'user',
-    //     content: 'My name is John',
-    //   },
-    //   {
-    //     role: 'ai',
-    //     content:
-    //       'Hello John! How can I help you today? If you have any questions or need assistance, please feel free to ask.Hello John! How can I help you today? If you have any questions or need assistance, please feel free to ask.',
-    //   },
-    // ]
-    // let answer = await this.bot.send(conversation, 'gpt-4')
-
     // 获取音频流
     navigator.mediaDevices
       .getUserMedia({ audio: true })
       .then(stream => {
+        console.log(stream)
         // 创建MediaRecorder实例
         this.mediaRecorder = new MediaRecorder(stream)
         // 创建AudioContext实例
@@ -170,7 +165,7 @@ export default {
         this.sourceNode.connect(this.analyserNode)
         this.analyserNode.connect(this.audioContext.destination)
         // 开始录音
-        this.mediaRecorder.start()
+        this.mediaRecorder.start(1)
       })
       .catch(error => {
         console.error('Failed to get user media:', error)

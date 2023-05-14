@@ -1,6 +1,6 @@
 {
   "name": "gpt",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Ireoo <i@ireoo.com>",
   "description": "speak with git",
   "homepage": "https://github.com/ireoo/gpt",
@@ -138,7 +138,7 @@
     "css-loader": "^0.28.11",
     "del": "^6.0.0",
     "devtron": "^1.4.0",
-    "electron": "^24.3.0",
+    "electron": "^11.0.0",
     "electron-builder": "^23.6.0",
     "electron-debug": "^3.2.0",
     "electron-devtools-installer": "^3.2.0",
